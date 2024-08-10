@@ -523,40 +523,23 @@ h6 {
   margin-bottom: 0; /* Elimina cualquier margen inferior */
 
 }
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
   color: #FFFFFF; /* Cambia el color del texto en el footer */
-  background-color: var(--background-color);
+  background: linear-gradient(45deg, #FF1150, #005CD7); /* Fondo con degradado */
   font-size: 14px;
   padding-top: 10px; /* Reducir padding superior */
   padding-bottom: 10px; /* Reducir padding inferior */
   position: relative;
-  background: linear-gradient(45deg, #FF1150, #005CD7); /* Fondo con degradado */
+  width: 100%; /* Asegurar que el footer ocupe todo el ancho */
 }
 
 .footer .footer-top {
   padding-top: 20px; /* Reducir padding superior en la parte superior del footer */
   padding-bottom: 10px; /* Reducir padding inferior en la parte superior del footer */
-}
-
-.footer .footer-about .logo {
-  margin-bottom: 15px; /* Reducir el margen inferior del logo */
-}
-
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-  filter: brightness(0) invert(1); /* Invierte el color de los logos para que sean blancos */
-}
-
-.footer .footer-about .logo span {
-  color: #FFFFFF; /* Cambia el color del texto del logo */
-  font-size: 24px; /* Reducir el tamaño de la fuente del logo */
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-family: var(--heading-font);
 }
 
 .footer .footer-about p {
@@ -585,53 +568,10 @@ h6 {
   border-color: #FFD700; /* Cambia el color del borde al pasar el cursor */
 }
 
-.footer h4 {
-  font-size: 15px; /* Reducir el tamaño de la fuente de los títulos */
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 8px; /* Reducir el padding inferior de los títulos */
-  color: #FFFFFF; /* Color de los títulos en el footer */
-}
-
-.footer .footer-links {
-  margin-bottom: 20px; /* Reducir margen inferior de los links */
-}
-
-.footer .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer .footer-links ul i {
-  padding-right: 2px;
-  font-size: 12px;
-  line-height: 0;
-}
-
-.footer .footer-links ul li {
-  padding: 8px 0; /* Reducir padding de los elementos de la lista */
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-.footer .footer-links ul a {
-  color: #FFFFFF; /* Cambia el color de los enlaces */
-  display: inline-block;
-  line-height: 1;
-}
-
-.footer .footer-links ul a:hover {
-  color: #FFD700; /* Cambia el color de los enlaces al pasar el cursor */
-}
-
-.footer .footer-contact p {
-  margin-bottom: 5px;
-  color: #FFFFFF; /* Cambia el color del texto de contacto */
+.footer .footer-logos img {
+  max-width: 100%; /* Asegurar que los logos no se salgan del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin: 0 10px; /* Reducir el margen entre las imágenes */
 }
 
 .footer .copyright {
@@ -645,16 +585,6 @@ h6 {
   margin-bottom: 0;
 }
 
-.footer .credits {
-  margin-top: 6px;
-  font-size: 13px;
-  color: #FFFFFF; /* Color del texto de créditos */
-}
-
-.footer .footer-logos img {
-  margin-left: 20px; /* Aumentar margen izquierdo entre imágenes para separarlas */
-  margin-right: 20px; /* Aumentar margen derecho entre imágenes para separarlas */
-}
 
 /*--------------------------------------------------------------
 # Preloader
