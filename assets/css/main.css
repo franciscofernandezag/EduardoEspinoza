@@ -1862,6 +1862,7 @@ section,
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
+  border-radius: 8px; /* Bordes redondeados para un aspecto más moderno */
 }
 
 .contact .info-item i {
@@ -1871,7 +1872,7 @@ section,
 }
 
 .contact .info-item h3 {
-  font-size: 20px;
+  font-size: 24px; /* Tamaño de fuente mayor para el título */
   font-weight: 700;
   margin: 20px 0 10px 0;
 }
@@ -1879,26 +1880,28 @@ section,
 .contact .info-item p {
   padding: 0;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px; /* Tamaño de fuente ajustado para mayor legibilidad */
   margin-bottom: 0;
 }
 
 .contact .php-email-form {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
-  height: 100%;
+  border-radius: 8px; /* Bordes redondeados para un aspecto más moderno */
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
 }
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
+  font-size: 16px; /* Tamaño de fuente ajustado para mayor legibilidad */
+  padding: 12px 15px; /* Espaciado interno ajustado */
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 4px; /* Bordes redondeados para los campos del formulario */
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -1917,14 +1920,17 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
   border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 4px;
+  padding: 12px 30px; /* Espaciado interno ajustado para el botón */
+  font-size: 16px; /* Tamaño de fuente ajustado para el botón */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  border-radius: 4px; /* Bordes redondeados para el botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
