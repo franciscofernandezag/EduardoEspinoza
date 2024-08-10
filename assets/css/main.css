@@ -1855,80 +1855,54 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 0;
 }
-
 /*--------------------------------------------------------------
-# Contact Section
+# Contact Information
 --------------------------------------------------------------*/
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
-  border-radius: 8px; /* Bordes redondeados para un aspecto más moderno */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1; /* Permite que los elementos crezcan igualmente */
+  margin: 10px; /* Añade espacio entre los elementos */
 }
 
 .contact .info-item i {
-  font-size: 38px;
+  font-size: 36px; /* Tamaño del ícono ajustado para mejor visibilidad */
   line-height: 0;
   color: var(--accent-color);
 }
 
 .contact .info-item h3 {
-  font-size: 24px; /* Tamaño de fuente mayor para el título */
+  font-size: 18px; /* Tamaño del título ajustado */
   font-weight: 700;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 5px 0;
 }
 
 .contact .info-item p {
   padding: 0;
-  line-height: 24px;
-  font-size: 16px; /* Tamaño de fuente ajustado para mayor legibilidad */
+  line-height: 20px;
+  font-size: 14px; /* Tamaño de fuente ajustado */
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
-  border-radius: 8px; /* Bordes redondeados para un aspecto más moderno */
-  max-width: 600px; /* Ancho máximo del formulario */
-  margin: 0 auto; /* Centra el formulario horizontalmente */
+/* Flexbox para disposición en pantallas grandes */
+@media (min-width: 992px) {
+  .contact .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 16px; /* Tamaño de fuente ajustado para mayor legibilidad */
-  padding: 12px 15px; /* Espaciado interno ajustado */
-  box-shadow: none;
-  border-radius: 4px; /* Bordes redondeados para los campos del formulario */
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: 0;
-  padding: 12px 30px; /* Espaciado interno ajustado para el botón */
-  font-size: 16px; /* Tamaño de fuente ajustado para el botón */
-  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
-  border-radius: 4px; /* Bordes redondeados para el botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 991px) {
+  .contact .d-flex {
+    flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+  }
+  
+  .contact .info-item {
+    margin: 10px 0; /* Espacio vertical entre elementos */
+  }
 }
 
 
