@@ -602,7 +602,7 @@ h6 {
 }
 
 #preloader img {
-  width: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+  width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
   height: auto; /* Mantiene la proporción de la imagen */
   animation: pulse 1.5s infinite;
 }
