@@ -216,3 +216,12 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.querySelectorAll('.btn-see-more').forEach(button => {
+  button.addEventListener('click', function() {
+    const description = this.previousElementSibling;
+    description.style.display = '-webkit-box' === description.style.display ? 'block' : '-webkit-box';
+    this.textContent = this.textContent === 'Ver más' ? 'Ver menos' : 'Ver más';
+  });
+});

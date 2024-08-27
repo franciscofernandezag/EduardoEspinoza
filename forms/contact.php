@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Configura el correo
     $to = $receiving_email_address;
-    $subject = "Contact Form: " . $subject;
+    $subject = "Contacto desde pagina Web: " . $subject;
     $headers = "From: $name <$email>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
