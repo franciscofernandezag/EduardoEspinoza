@@ -1,0 +1,20 @@
+# robots.txt para www.eduardoespinoza.cl
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /private/
+Allow: /public/
+
+# Permitir el acceso a todos los archivos importantes
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Evitar indexar parámetros de búsqueda
+Disallow: /search?
+
+# Sitemap
+Sitemap: https://www.eduardoespinoza.cl/sitemap.xml
