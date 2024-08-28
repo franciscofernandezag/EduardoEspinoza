@@ -459,7 +459,7 @@ h6 {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 0; /* Elimina el padding inferior */
+  padding: 140px 0 0; /* Elimina el padding inferior */
   display: flex;
   align-items:end;
   justify-content:flex-end;
@@ -480,20 +480,30 @@ h6 {
 .hero .col-lg-7 {
   text-align: left;
 }
+
 .hero .col-lg-5 {
   margin-bottom: 0; /* Asegúrate de que no haya márgenes adicionales */
   padding-bottom: 0; /* Asegúrate de que no haya padding adicional */
 }
-.hero h2 {
-  font-size: 20px; /* Ajusta el tamaño del texto según sea necesario */
-}
 
 .hero h2 {
-  font-size: 28px; /* Ajusta el tamaño del texto según sea necesario */
-  margin-bottom: 10px; /* Ajusta el margen inferior del encabezado */
+  font-size: 24px; /* Reduce el tamaño del título */
+  margin-bottom: 15px;
+  color: #ffffff; /* Blanco para contrastar con el fondo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
 }
+
+.hero p {
+  font-size: 16px; /* Reduce el tamaño de los párrafos */
+  line-height: 1.5; /* Aumenta el espacio entre líneas para mejor legibilidad */
+  margin-bottom: 5px;
+  color: #f0f0f0; /* Un tono de gris claro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
 /* Estilo para el botón de "¡Escríbenos!" */
 .btn-getstarted {
+  margin-top: 10px;
   color: #ffffff; /* Color del texto blanco */
   background-color: #005CD7; /* Color de fondo azul */
   font-size: 14px;
@@ -523,6 +533,13 @@ h6 {
   margin-bottom: 0; /* Elimina cualquier margen inferior */
 
 }
+
+/* Posicionamiento de los logos */
+/* Ajustes del logo Recuperar Chile */
+.logo-recuperar-chile {
+  margin-top: 15px; /* Espacio superior para separarlo del botón */
+}
+
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -663,6 +680,85 @@ h6 {
     transition-delay: 0 !important;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Conoceme section 
+--------------------------------------------------------------*/
+#conoceme {
+  background: linear-gradient(135deg, #e47c37, #d2d1d3); /* Degradado de fondo entre rojo y azul */
+  color: #fff; /* Color de texto blanco para contraste */
+
+}
+
+#conoceme .section-title {
+  text-align: center; /* Centrar el título de la sección */
+}
+
+#conoceme h2 {
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+}
+
+#conoceme h3 {
+  font-size: 2rem; /* Tamaño medio para el subtítulo */
+  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+}
+
+#conoceme p {
+  margin-bottom: 15px;
+  text-align: justify; /* Justificar el texto */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+.icon-box {
+  background: #ffffff; /* Fondo blanco para los iconos */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto dentro del icono box */
+  transition: background-color 0.3s ease; /* Transición suave en el hover */
+}
+
+.icon-box i {
+  font-size: 2rem; /* Tamaño grande para los iconos */
+  color: #6a62a1; /* Color del icono */
+  margin-bottom: 10px; /* Espacio debajo del icono */
+}
+
+.icon-box h4 {
+  font-size: 1.25rem; /* Tamaño del título */
+  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+  margin-bottom: 10px;
+}
+
+.icon-box p {
+  font-size: 1rem; /* Tamaño del texto en el icono box */
+}
+
+.icon-box:hover {
+  background-color: #f0f0f0; /* Color de fondo en hover */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #conoceme .row {
+    flex-direction: column;
+  }
+
+  #conoceme .text-left, #conoceme img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #conoceme img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
