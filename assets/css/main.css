@@ -681,14 +681,12 @@ h6 {
   }
 }
 
-
 /*--------------------------------------------------------------
 # Conoceme section 
 --------------------------------------------------------------*/
 #conoceme {
-  background: linear-gradient(135deg, #e47c37, #d2d1d3); /* Degradado de fondo entre rojo y azul */
-  color: #fff; /* Color de texto blanco para contraste */
-
+  background: linear-gradient(135deg, #1f5c80, #857d8d); /* Degradado de fondo */
+  color: #EAEAEA; /* Color de texto gris claro para buen contraste */
 }
 
 #conoceme .section-title {
@@ -698,17 +696,23 @@ h6 {
 #conoceme h2 {
   font-size: 2.5rem; /* Tamaño grande para el título */
   font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+  color: #FFD700; /* Color dorado para el título */
+  font-weight: 800; /* Negrita para mayor impacto */
 }
 
 #conoceme h3 {
   font-size: 2rem; /* Tamaño medio para el subtítulo */
   font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+  color: #FFFFFF; /* Subtítulo en blanco */
+  font-weight: 700; /* Más negrita para subtítulos */
 }
 
 #conoceme p {
   margin-bottom: 15px;
   text-align: justify; /* Justificar el texto */
   line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  font-weight: 600; /* Aumentar negrita para los párrafos */
+  color: #F0F0F0; /* Texto gris claro para buen contraste */
 }
 
 .icon-box {
@@ -729,14 +733,34 @@ h6 {
   font-size: 1.25rem; /* Tamaño del título */
   font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
   margin-bottom: 10px;
+  font-weight: 700; /* Negrita para el título del icono */
 }
 
 .icon-box p {
   font-size: 1rem; /* Tamaño del texto en el icono box */
+  font-weight: 600; /* Aumentar peso del texto para mayor legibilidad */
 }
 
 .icon-box:hover {
   background-color: #f0f0f0; /* Color de fondo en hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #conoceme .row {
+    flex-direction: column;
+  }
+
+  #conoceme .text-left, #conoceme img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #conoceme img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+  }
 }
 
 
@@ -757,6 +781,7 @@ h6 {
     margin-bottom: 0px;
   }
 }
+
 
 
 
