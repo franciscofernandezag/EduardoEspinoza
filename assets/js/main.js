@@ -158,7 +158,23 @@
    */
   new PureCounter();
 
+  /**
+   * Navbar active link on scroll
+   */
+  function setActiveNavLink() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('#navmenu a');
+    let index = sections.length;
+
+    while (--index && window.scrollY + (window.innerHeight / 2) < sections[index].offsetTop) {}
+
+    navLinks.forEach((link) => link.classList.remove('active'));
+    if (navLinks[index]) {
+      navLinks[index].classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', setActiveNavLink);
+  document.addEventListener('DOMContentLoaded', setActiveNavLink);
+
 })();
-
-
-
