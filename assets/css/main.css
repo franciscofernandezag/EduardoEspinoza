@@ -1917,6 +1917,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 0;
 }
+
 /*--------------------------------------------------------------
 # Contact Information
 --------------------------------------------------------------*/
@@ -1954,6 +1955,79 @@ section,
     display: flex;
     justify-content: space-between;
   }
+  
+  /* Ajustes para el formulario y la sección "Quiero ser" */
+  .contact .col-lg-4 {
+    display: flex;
+    flex: 1; /* Permite que ocupe el espacio disponible */
+    flex-direction: column;
+    align-items: start;
+    order: 1; /* Asegura que esta columna esté a la izquierda */
+  }
+  
+  .contact .col-lg-8 {
+    max-width: 70%;
+    margin: 0 auto;
+    order: 2; /* Asegura que esta columna esté a la derecha */
+  }
+  
+  .contact .col-lg-4 {
+    margin-right: 20px; /* Espacio a la derecha de la sección "Quiero ser" */
+  }
+  
+  .contact .col-lg-4 .section-quero-ser {
+    border: 2px solid var(--border-color); /* Borde de la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo de la sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+  }
+  
+  .contact .col-lg-4 h3 {
+    font-size: 20px; /* Tamaño del título en la sección "Quiero ser" */
+    margin-bottom: 15px;
+  }
+  
+  .contact .col-lg-4 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact .col-lg-4 ul li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Tamaño del texto en la lista */
+    position: relative;
+    padding-left: 40px; /* Espacio para el icono */
+  }
+  
+  .contact .col-lg-4 ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; /* Tamaño del círculo */
+    height: 24px; /* Tamaño del círculo */
+    border-radius: 50%;
+    background: var(--accent-color); /* Color del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .col-lg-4 ul li::before {
+    content: '\f005'; /* Código Unicode para el icono de estrella de Font Awesome */
+    font-family: 'Font Awesome 5 Free'; /* Usa Font Awesome para el icono */
+    font-weight: 900; /* Peso del icono */
+    color: #fff; /* Color del icono */
+    font-size: 14px; /* Tamaño del icono */
+  }
+
+  .contact .php-email-form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Estilos para pantallas más pequeñas */
@@ -1965,6 +2039,83 @@ section,
   .contact .info-item {
     margin: 10px 0; /* Espacio vertical entre elementos */
   }
+  
+  /* Ajustes para el formulario y la sección "Quiero ser" en pantallas pequeñas */
+  .contact .col-lg-8,
+  .contact .col-lg-4 {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contact .col-lg-4 {
+    margin-top: 20px; /* Espacio arriba de la sección "Quiero ser" */
+  }
+  
+  .contact .col-lg-4 h3 {
+    font-size: 18px; /* Tamaño del título en la sección "Quiero ser" */
+  }
+  
+  .contact .col-lg-4 ul li {
+    font-size: 14px; /* Tamaño del texto en la lista */
+  }
+}
+
+.section-quero-ser {
+  border: 2px solid var(--border-color); /* Borde de la sección */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo de la sección */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.section-quero-ser h3 {
+  font-size: 24px; /* Tamaño del título */
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-color); /* Color del título */
+}
+
+.section-quero-ser ul {
+  list-style: none; /* Elimina los puntos de lista */
+  padding: 0;
+  margin: 0;
+}
+
+.section-quero-ser ul li {
+  font-size: 16px; /* Tamaño de la fuente de los ítems */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+  position: relative;
+  padding-left: 40px; /* Espacio para el icono */
+}
+
+.section-quero-ser ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; /* Tamaño del círculo */
+  height: 24px; /* Tamaño del círculo */
+  border-radius: 50%;
+  background: var(--accent-color); /* Color del círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-quero-ser ul li::before {
+  content: '\f005'; /* Código Unicode para el icono de estrella de Font Awesome */
+  font-family: 'Font Awesome 5 Free'; /* Usa Font Awesome para el icono */
+  font-weight: 900; /* Peso del icono */
+  color: #fff; /* Color del icono */
+  font-size: 14px; /* Tamaño del icono */
+}
+
+.section-quero-ser p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: var(--text-color);
 }
 
 
@@ -2707,12 +2858,8 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
+
 
 /*--------------------------------------------------------------
 # Widgets
