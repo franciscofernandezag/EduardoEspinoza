@@ -462,6 +462,7 @@ h6 {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  text-align: center; /* Centra todo el contenido de la sección hero */
   padding: 140px 0 0; /* Elimina el padding inferior */
   display: flex;
   align-items:end;
