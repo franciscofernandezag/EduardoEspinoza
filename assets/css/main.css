@@ -486,6 +486,12 @@ h6 {
   padding-bottom: 0; /* Asegúrate de que no haya padding adicional */
 }
 
+.hero h1 {
+  font-size: 24px; /* Reduce el tamaño del título */
+  margin-bottom: 15px;
+  color: #ffffff; /* Blanco para contrastar con el fondo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
 .hero h2 {
   font-size: 24px; /* Reduce el tamaño del título */
   margin-bottom: 15px;
