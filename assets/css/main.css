@@ -458,6 +458,7 @@ h6 {
 }
 
 /* Hero Section */
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -470,7 +471,12 @@ h6 {
   background: linear-gradient(45deg, #FF1150, #005CD7); /* Degradado de 45° entre los dos colores */
 }
 
+.hero-image {
+    max-width: 90% !important; /* Aumenta la especificidad */
+    transform: scale(0.9) !important; /* Escala la imagen */
 
+
+}
 .hero .container {
   position: relative;
   z-index: 3;
