@@ -174,6 +174,80 @@
     }
   }
 
+  function handleShowMoreEvents() {
+    const eventItems = document.querySelectorAll('#eventos .row .col-md-6'); // Selecciona todos los eventos
+    const showMoreBtn = document.createElement('button'); // Crea el botón "Ver más"
+    showMoreBtn.textContent = 'Ver más';
+    showMoreBtn.classList.add('btn', 'btn-primary', 'mt-4'); // Agrega clases al botón para estilos
+
+    // Crea un contenedor para centrar el botón
+    const btnContainer = document.createElement('div');
+    btnContainer.classList.add('d-flex', 'justify-content-center'); // Clases de Bootstrap para centrar
+
+    let isShowingAll = false; // Variable para rastrear si todos los eventos están mostrados
+
+    // Función para determinar cuántos eventos mostrar basado en el ancho de la pantalla
+    function determineVisibleEvents() {
+      const width = window.innerWidth;
+      if (width <= 767) { // Móviles (<= 767px)
+        return 3;
+      } else if (width <= 820) { // Tablet (576px - 820)
+        return 4;
+      } else { // Desktop (> 820px)
+        return 6;
+      }
+    }
+
+    // Función para inicializar la visibilidad de los eventos
+    function initEventVisibility() {
+      const visibleCount = determineVisibleEvents(); // Número de eventos a mostrar
+      eventItems.forEach((item, index) => {
+        if (index >= visibleCount) {
+          item.style.display = 'none';
+        } else {
+          item.style.display = 'block';
+        }
+      });
+    }
+
+    // Añadir el botón "Ver más" dentro del contenedor centrado
+    btnContainer.appendChild(showMoreBtn);
+
+    // Añadir el contenedor con el botón "Ver más" después de la lista de eventos
+    const eventsContainer = document.querySelector('#eventos .container .row');
+    eventsContainer.parentNode.appendChild(btnContainer);
+
+    // Inicializa la visibilidad de los eventos al cargar la página
+    initEventVisibility();
+
+    // Añadir evento al botón "Ver más" para mostrar el resto de eventos
+    showMoreBtn.addEventListener('click', () => {
+      if (!isShowingAll) {
+        // Mostrar todos los eventos
+        eventItems.forEach(item => {
+          item.style.display = 'block';
+        });
+        showMoreBtn.textContent = 'Ver menos'; // Cambia el texto del botón
+        isShowingAll = true;
+      } else {
+        // Restablecer la visibilidad inicial de los eventos según el dispositivo
+        initEventVisibility();
+        showMoreBtn.textContent = 'Ver más'; // Cambia el texto del botón
+        isShowingAll = false;
+      }
+    });
+
+    // Reajustar el número de eventos mostrados al cambiar el tamaño de la ventana
+    window.addEventListener('resize', () => {
+      if (!isShowingAll) {
+        initEventVisibility(); // Reinicializa la visibilidad de los eventos
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', handleShowMoreEvents);
+
+  
   window.addEventListener('scroll', setActiveNavLink);
   document.addEventListener('DOMContentLoaded', setActiveNavLink);
 
