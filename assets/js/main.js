@@ -134,12 +134,15 @@
 
   });
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    // Inicialización del Swiper para la sección de eventos
-    const swiper = new Swiper('.swiper-container', {
+/**
+ * Init swiper sliders
+ */
+function initSwiper() {
+  // Inicialización del Swiper solo para los contenedores en la sección de eventos
+  const eventSwipers = document.querySelectorAll('#eventos .swiper-container');
+
+  eventSwipers.forEach(function(container) {
+    new Swiper(container, {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -150,22 +153,24 @@
         prevEl: '.swiper-button-prev',
       },
     });
-    
-    // Inicialización adicional si tienes otros sliders
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+  });
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
+  // Inicialización adicional si tienes otros sliders
+  document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    let config = JSON.parse(
+      swiperElement.querySelector(".swiper-config").innerHTML.trim()
+    );
 
-  window.addEventListener("load", initSwiper);
+    if (swiperElement.classList.contains("swiper-tab")) {
+      initSwiperWithCustomPagination(swiperElement, config);
+    } else {
+      new Swiper(swiperElement, config);
+    }
+  });
+}
+
+window.addEventListener("load", initSwiper);
+
 
   /**
    * Initiate Pure Counter
