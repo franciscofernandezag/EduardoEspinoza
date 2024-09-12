@@ -1102,6 +1102,9 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+
+
 .services .service-item {
   position: relative;
   padding-top: 40px;
@@ -1162,7 +1165,9 @@ section,
   margin-bottom: 15px;
   font-size: 18px;
 }
-
+.title i {
+  margin-right: 1rem; /* Ajusta este valor según sea necesario */
+}
 .services .service-item .title a {
   color: var(--heading-color);
 }
@@ -2517,6 +2522,7 @@ section,
   margin: 0 5px;
   transition: 0.3s;
 }
+
 
 .blog-pagination li a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);

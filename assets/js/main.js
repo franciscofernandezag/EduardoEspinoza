@@ -138,6 +138,20 @@
    * Init swiper sliders
    */
   function initSwiper() {
+    // Inicialización del Swiper para la sección de eventos
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    
+    // Inicialización adicional si tienes otros sliders
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -246,7 +260,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', handleShowMoreEvents);
-
   
   window.addEventListener('scroll', setActiveNavLink);
   document.addEventListener('DOMContentLoaded', setActiveNavLink);
