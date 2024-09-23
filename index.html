@@ -81,41 +81,77 @@
 
 <main class="main">
 
+
 <!-- Sección del Héroe -->
 <section id="hero" class="hero section dark-background">
   <div class="container">
-      <div class="row align-items-center">
-          <!-- Contenedor para el texto -->
-          <div class="col-lg-7 order-lg-1">
-              <h1 data-aos="fade-up" data-aos-delay="100">Eduardo Espinoza 2024</h1>
-              <h2 data-aos="fade-up" data-aos-delay="200">Candidato a Alcalde de Macul</h2>
-              <p data-aos="fade-up" data-aos-delay="300">
-                  Tu apoyo es fundamental para lograr un cambio positivo en Macul. Conoce nuestras propuestas y únete a la campaña.
-              </p>
-              <p data-aos="fade-up" data-aos-delay="400">
-                  Juntos podemos construir un futuro mejor para nuestra comunidad.
-              </p>
-              <p data-aos="fade-up" data-aos-delay="500"> 
-                  Haznos saber que quieres ser parte de esta transformación. ¡Tu voz cuenta!
-              </p>
-              <a href="mailto:conversemos@eduardoespinoza.cl" class="btn-getstarted">
-                  <i class="bi bi-envelope"></i> ¡Escríbenos!
-              </a>
-              <!-- Logo Recuperar Chile debajo del botón -->
-              <div class="text-center mt-3">
-                  <img src="assets/img/RecuperarChile.png" alt="Recuperar Chile - Campaña Eduardo Espinoza" class="logo-recuperar-chile" width="130" height="60">
-              </div>
-          </div>
-          
-          <!-- Contenedor para la imagen -->
-          <div class="col-lg-5 order-lg-2 position-relative d-flex justify-content-center;">
-            <!-- Imagen Hero -->
-            <img src="assets/img/Hero4.png" alt="Eduardo Espinoza en campaña para alcalde de Macul" class="hero-image" data-aos="fade-in">
-          </div>
+    <div class="row align-items-center">
+      <!-- Contenedor para el texto -->
+      <div class="col-lg-7 order-lg-1">
+        <h1 data-aos="fade-up" data-aos-delay="100">Eduardo Espinoza 2024</h1>
+        <h2 data-aos="fade-up" data-aos-delay="200">Candidato a Alcalde de Macul</h2>
+        <p data-aos="fade-up" data-aos-delay="300">
+          Tu apoyo es fundamental para lograr un cambio positivo en Macul. Conoce nuestras propuestas y únete a la campaña.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="400">
+          Juntos podemos construir un futuro mejor para nuestra comunidad.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="500"> 
+          Haznos saber que quieres ser parte de esta transformación. ¡Tu voz cuenta!
+        </p>
+
+        <a href="mailto:conversemos@eduardoespinoza.cl" class="btn-getstarted">
+          <i class="bi bi-envelope"></i> ¡Escríbenos!
+        </a>
+
+        <!-- Logo Recuperar Chile debajo del botón -->
+        <div class="text-center mt-3">
+          <img src="assets/img/RecuperarChile.png" alt="Recuperar Chile - Campaña Eduardo Espinoza" class="logo-recuperar-chile" width="130" height="60">
+        </div>
+        
+        <!-- Contenedor de la cuenta regresiva debajo del logo -->
+        <div id="countdown" class="text-center mt-3" data-aos="fade-up" data-aos-delay="700">
+          <h2 data-aos="fade-up" data-aos-delay="200">Cuenta regresiva para las elecciones:</h2>
+          <p id="countdown-timer" style="font-size: 24px;"></p>
+        </div>
+
       </div>
+
+      <!-- Contenedor para la imagen -->
+      <div class="col-lg-5 order-lg-2 position-relative d-flex justify-content-center;">
+        <img src="assets/img/Hero4.png" alt="Eduardo Espinoza en campaña para alcalde de Macul" class="hero-image" data-aos="fade-in">
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Script para la cuenta regresiva -->
+<script>
+  // Fecha objetivo de las elecciones: 27 de octubre de 2024, 8:00 hrs
+  const electionDate = new Date("Oct 27, 2024 08:00:00").getTime();
+
+  // Actualización del contador cada segundo
+  const countdownInterval = setInterval(() => {
+    const now = new Date().getTime();
+    const timeLeft = electionDate - now;
+
+    // Calcular días, horas, minutos y segundos
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Mostrar resultado en el elemento con id "countdown-timer"
+    document.getElementById("countdown-timer").innerHTML = 
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    // Si la cuenta regresiva ha terminado
+    if (timeLeft < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("countdown-timer").innerHTML = "¡Es el día de las elecciones!";
+    }
+  }, 1000);
+</script>
 
 
 </main>
@@ -226,7 +262,7 @@
         </div>
         <div>
           <p class="fw-bold">Creación de la Cámara de Comercio local</p>
-          <p>Apoyaremonos a los emprendedores, microempresarios y empresarios de Macul mediante la creación de una Cámara de Comercio dedicada a su desarrollo.</p>
+          <p>Apoyaremos a los emprendedores, microempresarios y empresarios de Macul mediante la creación de una Cámara de Comercio dedicada a su desarrollo.</p>
         </div>
       </li>
     </ul>
