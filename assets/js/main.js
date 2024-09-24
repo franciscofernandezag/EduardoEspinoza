@@ -264,9 +264,11 @@ window.addEventListener("load", initSwiper);
     });
   }
 
+
   document.addEventListener('DOMContentLoaded', handleShowMoreEvents);
   
   window.addEventListener('scroll', setActiveNavLink);
   document.addEventListener('DOMContentLoaded', setActiveNavLink);
 
 })();
+
