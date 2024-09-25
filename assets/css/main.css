@@ -562,6 +562,99 @@ h6 {
 .hidden {
   display: none;
 }
+/*--------------------------------------------------------------
+#10 Primeras medidas
+--------------------------------------------------------------*/
+/* Fondo degradado para las 10 medidas */
+.service-item.medidas {
+  background: linear-gradient(45deg, #003B5C, #048fca); /* Degradado azul más oscuro y sobrio */
+  color: white;
+  border-radius: 10px;
+  padding: 20px; /* Añadido padding para mayor espacio interno */
+}
+
+/* Alinear ícono a la izquierda */
+.icon-left {
+  font-size: 3.5rem;
+  align-self: flex-start;
+  color: #fd0000; /* Color rojo para el ícono */
+}
+
+/* Contenedor para títulos */
+.titulo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Subtítulo más pequeño */
+h4.subtitulo {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #FF5733; /* Color rojo suave para el subtítulo */
+}
+.icon-left {
+  color: white; /* Cambia el color del ícono a blanco */
+}
+
+/* Estilos para el contenedor de título e ícono */
+.medidas-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  background: linear-gradient(45deg, #f70949, #f76c4d); /* Degradado rojo que comienza más claro y oscurece hacia el centro */
+  padding: 15px; /* Reducción de padding para mayor ajuste */
+  border-radius: 8px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra más suave */
+}
+
+/* Efecto simple en los títulos (color blanco) */
+h2.title,
+h4.title {
+  color: white;
+}
+
+/* Estilo para h2 en el contenedor de títulos */
+.medidas-titulo .titulo-container h2 {
+  color: white !important; /* Fuerza el color blanco ignorando otras reglas */
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra más marcada para resaltar */
+}
+
+/* Estilo para los números redondos con fondo degradado rojo */
+.numero {
+  background: linear-gradient(45deg, #f70949, #f76c4d); /* Degradado rojo */
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más suave y difusa */
+}
+
+/* Fondo y sombras en las letras de los items */
+.medida-item {
+  background: transparent;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: none; /* Elimina bordes */
+}
+
+/* Estilo para el párrafo final */
+.service-item.medidas p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  line-height: 1.5; /* Mejora la legibilidad */
+  font-size: 1.1rem; /* Ajusta el tamaño del texto */
+}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -3063,6 +3156,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Equipo
+# 
 --------------------------------------------------------------*/
 
