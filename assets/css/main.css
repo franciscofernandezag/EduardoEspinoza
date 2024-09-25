@@ -152,6 +152,15 @@ h6 {
   }
 }
 
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -657,6 +666,59 @@ h4.title {
 }
 
 /*--------------------------------------------------------------
+# Estilos para el div de párrafos destacados
+--------------------------------------------------------------*/
+.parrafos-destacados {
+  background: linear-gradient(45deg, #ff3030, #f80202); /* Fondo degradado */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  width: 50%; /* Ancho del div */
+  max-width: 300px; /* Limita el ancho máximo si es necesario */
+  margin: 10px auto; /* Centra el div verticalmente en el espacio */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Añadir sombra para mejor visibilidad */
+}
+
+/* Estilos para los párrafos dentro de la clase parrafos-destacados */
+.parrafo-estilo {
+  margin: 0; /* Elimina margen por defecto */
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el texto */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .service-item.medidas {
+    padding: 15px; /* Menor padding en móvil */
+  }
+
+  .numero {
+    width: 40px; /* Reducir el tamaño en móviles */
+    height: 40px; /* Reducir el tamaño en móviles */
+    font-size: 1.5rem; /* Tamaño del número más pequeño */
+  }
+
+  h2.titulo-general {
+    font-size: 10px; /* Hacer más pequeño en móviles */
+  }
+
+  h4.subtitulo-general {
+    font-size: 1rem; /* Reducir tamaño del subtítulo */
+  }
+  
+  .medidas-titulo {
+    justify-content: center; /* Centrar íconos y título en móviles */
+    text-align: center;
+  }
+
+  .parrafos-destacados {
+    padding: 10px; /* Espaciado interno */
+    width: 80%; /* Ancho del div */
+    margin: 10px auto; /* Centra el div verticalmente en el espacio */
+  }
+  
+}
+
+/*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
@@ -946,6 +1008,17 @@ h4.title {
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
+
+/* Estilo para el elemento "Gobernador Regional" */
+.two-line {
+  font-size: 0.9em; /* Ajustar el tamaño de la fuente */
+  padding: 0; /* Quitar padding */
+  margin: 0; /* Quitar margen */
+  line-height: 1.2; /* Ajustar el interlineado para ocupar menos espacio vertical */
+  text-align: center; /* Centrar el texto si lo deseas */
+}
+
+
 
 /*--------------------------------------------------------------
 # Global Sections
@@ -1776,6 +1849,9 @@ section,
   font-size: 18px;
 }
 
+
+
+
 .team .member .member-info span {
   font-style: italic;
   display: block;
@@ -1794,6 +1870,8 @@ section,
   visibility: visible;
   opacity: 1;
 }
+
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
