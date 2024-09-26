@@ -1400,25 +1400,26 @@
   // Script para gestionar los botones "Ver más" y "Ver menos"
   document.querySelectorAll('.paragraph').forEach(paragraph => {
     const moreContent = paragraph.querySelector('.more-content');
-    const readMoreBtn = paragraph.nextElementSibling; // "Ver más" button
-    const readLessBtn = paragraph.nextElementSibling.nextElementSibling; // "Ver menos" button
+    const readMoreBtn = paragraph.parentElement.querySelector('.read-more'); // Botón "Ver más"
+    const readLessBtn = paragraph.parentElement.querySelector('.read-less'); // Botón "Ver menos"
 
-    // Show the "Ver más" button if there's more content
+    // Solo mostrar el botón "Ver más" si hay contenido adicional
     if (moreContent && moreContent.textContent.trim() !== '') {
-      readMoreBtn.style.display = 'inline'; // Show the "Ver más" button
+      readMoreBtn.style.display = 'inline'; // Mostrar el botón "Ver más"
+      readLessBtn.style.display = 'none'; // Asegurarse de que "Ver menos" esté oculto inicialmente
 
-      // Adds click event to show more content
+      // Añadir evento al botón "Ver más"
       readMoreBtn.addEventListener('click', () => {
-        moreContent.style.display = 'inline'; // Show the additional content
-        readMoreBtn.style.display = 'none'; // Hide the "Ver más" button
-        readLessBtn.style.display = 'inline'; // Show the "Ver menos" button
+        moreContent.style.display = 'inline'; // Mostrar el contenido adicional
+        readMoreBtn.style.display = 'none'; // Ocultar el botón "Ver más"
+        readLessBtn.style.display = 'inline'; // Mostrar el botón "Ver menos"
       });
 
-      // Adds click event to hide the additional content
+      // Añadir evento al botón "Ver menos"
       readLessBtn.addEventListener('click', () => {
-        moreContent.style.display = 'none'; // Hide the additional content
-        readMoreBtn.style.display = 'inline'; // Show the "Ver más" button
-        readLessBtn.style.display = 'none'; // Hide the "Ver menos" button
+        moreContent.style.display = 'none'; // Ocultar el contenido adicional
+        readMoreBtn.style.display = 'inline'; // Mostrar el botón "Ver más"
+        readLessBtn.style.display = 'none'; // Ocultar el botón "Ver menos"
       });
     }
   });
