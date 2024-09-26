@@ -718,6 +718,8 @@ h4.title {
   
 }
 
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -1009,14 +1011,6 @@ h4.title {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-/* Estilo para el elemento "Gobernador Regional" */
-.two-line {
-  font-size: 0.9em; /* Ajustar el tamaño de la fuente */
-  padding: 0; /* Quitar padding */
-  margin: 0; /* Quitar margen */
-  line-height: 1.2; /* Ajustar el interlineado para ocupar menos espacio vertical */
-  text-align: center; /* Centrar el texto si lo deseas */
-}
 
 
 

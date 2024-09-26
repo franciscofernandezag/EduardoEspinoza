@@ -1,0 +1,16 @@
+{
+    "spellright.language": ["es"],  // Idioma de corrección
+    "spellright.documentTypes": [
+      "html"
+    ],
+    "spellright.ignoreRegExpsByClass": {
+      "html": [
+        "<[^>]*>",              // Ignora etiquetas HTML
+        "&[^;]+;",              // Ignora entidades HTML (&nbsp;, &amp;, etc.)
+        "(?s)<script[^>]*>.*?</script>", // Ignora contenido dentro de <script>
+        "(?s)<style[^>]*>.*?</style>",   // Ignora contenido dentro de <style>
+        "(?s)<!--.*?-->"        // Ignora comentarios HTML
+      ]
+    }
+  }
+  
