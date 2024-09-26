@@ -193,6 +193,9 @@ window.addEventListener("load", initSwiper);
     }
   }
 
+
+
+  
   function handleShowMoreEvents() {
     const eventItems = document.querySelectorAll('#eventos .row .col-md-6'); // Selecciona todos los eventos
     const showMoreBtn = document.createElement('button'); // Crea el botón "Ver más"
