@@ -487,6 +487,19 @@ h6 {
     
 
 }
+
+.title-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para dejar espacio entre los títulos y la imagen */
+}
+
+.title-with-image img {
+  margin-left: 15px; /* Espacio entre el título y la imagen */
+  width: 130px; /* Ajusta el tamaño de la imagen */
+  height: 60px;
+}
+
 .hero .container {
   position: relative;
   z-index: 3;
