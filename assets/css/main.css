@@ -171,6 +171,7 @@ h6 {
   display: flex;
   justify-content: space-between; /* Asegura que los logos y el resto del contenido estén distribuidos correctamente */
   align-items: center;
+  height: 100px; /* Ajusta la altura del header */
   
 }
 
