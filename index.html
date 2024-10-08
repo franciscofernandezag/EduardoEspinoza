@@ -114,13 +114,31 @@
         </a>
 
         <!-- Contenedor de la cuenta regresiva debajo del botón -->
-        <div id="countdown" class="text-center mt-3" data-aos="fade-up" data-aos-delay="700">
-          <img src="assets/img/RecuperarChile.png" alt="Recuperar Chile - Campaña Eduardo Espinoza" class="logo-recuperar-chile" width="130" height="60" data-aos="fade-up" data-aos-delay="300">
+        <div id="countdown" class="text-center mt-3" data-aos="fade-up" data-aos-delay="700" style="padding: 20px; border-radius: 15px;">
+    <img src="assets/img/RecuperarChile.png" alt="Recuperar Chile - Campaña Eduardo Espinoza" class="logo-recuperar-chile" width="130" height="60" data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 20px;">
 
-          <h2 data-aos="fade-up" data-aos-delay="200">Cuenta regresiva para las elecciones:</h2>
-          <h5 data-aos="fade-up" data-aos-delay="200">Domingo 27 de Octubre</h5>
-          <p id="countdown-timer" style="font-size: 24px;"></p>
+    <h2 data-aos="fade-up" data-aos-delay="200" style="color: #ffffff; font-weight: bold;">Cuenta regresiva para las elecciones:</h2>
+    <h5 data-aos="fade-up" data-aos-delay="200" style="color: #FFD700; margin-bottom: 30px;">Sábado 26 y Domingo 27 de Octubre</h5>
+
+    <div id="countdown-timer" style="display: flex; justify-content: center; gap: 20px; font-size: 36px; color: #ffffff;">
+        <div style="text-align: center;">
+            <span id="days" style="font-weight: bold;"></span>
+            <p style="color: #FFD700;">Días</p>
         </div>
+        <div style="text-align: center;">
+            <span id="hours" style="font-weight: bold;"></span>
+            <p style="color: #FFD700;">Horas</p>
+        </div>
+        <div style="text-align: center;">
+            <span id="minutes" style="font-weight: bold;"></span>
+            <p style="color: #FFD700;">Minutos</p>
+        </div>
+        <div style="text-align: center;">
+            <span id="seconds" style="font-weight: bold;"></span>
+            <p style="color: #FFD700;">Segundos</p>
+        </div>
+    </div>
+</div>
       </div>
 
       <!-- Contenedor para la imagen -->
@@ -134,8 +152,8 @@
 
 <!-- Script para la cuenta regresiva -->
 <script>
-  // Fecha objetivo de las elecciones: 27 de octubre de 2024, 8:00 hrs
-  const electionDate = new Date("Oct 27, 2024 08:00:00").getTime();
+  // Fecha objetivo: 26 de octubre de 2024, 8:00 hrs
+  const electionDate = new Date("Oct 26, 2024 08:00:00").getTime();
 
   // Actualización del contador cada segundo
   const countdownInterval = setInterval(() => {
@@ -148,14 +166,16 @@
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Mostrar resultado en el elemento con id "countdown-timer"
-    document.getElementById("countdown-timer").innerHTML = 
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    // Actualizar los valores en el DOM
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
     // Si la cuenta regresiva ha terminado
     if (timeLeft < 0) {
       clearInterval(countdownInterval);
-      document.getElementById("countdown-timer").innerHTML = "¡Es el día de las elecciones!";
+      document.getElementById("countdown-timer").innerHTML = "¡Es día de las elecciones!";
     }
   }, 1000);
 </script>
