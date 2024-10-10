@@ -474,20 +474,14 @@ h6 {
   min-height: 100vh;
   position: relative;
   text-align: center; /* Centra todo el contenido de la sección hero */
-  padding: 140px 0 0; /* Elimina el padding inferior */
+  padding: 100px 0 0 0; /* Elimina el padding inferior */
   display: flex;
   align-items:end;
   justify-content:flex-end;
   background: linear-gradient(45deg, #FF1150, #005CD7); /* Degradado de 45° entre los dos colores */
 }
 
-.hero-image {
-    max-width: 90% !important; /* Aumenta la especificidad */
-    transform: scale(0.9) !important; /* Escala la imagen */
 
-    
-
-}
 
 .title-with-image {
   display: flex;
@@ -495,11 +489,7 @@ h6 {
   justify-content: space-between; /* Para dejar espacio entre los títulos y la imagen */
 }
 
-.title-with-image img {
-  margin-left: 15px; /* Espacio entre el título y la imagen */
-  width: 130px; /* Ajusta el tamaño de la imagen */
-  height: 60px;
-}
+
 
 .hero .container {
   position: relative;
@@ -521,7 +511,6 @@ h6 {
 }
 
 .hero h1 {
-  font-size: 24px; /* Reduce el tamaño del título */
   margin-bottom: 15px;
   color: #ffffff; /* Blanco para contrastar con el fondo */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
@@ -571,20 +560,12 @@ h6 {
   max-width: 100%;
   height: auto;
   margin-bottom: 0; /* Elimina cualquier margen inferior */
-
 }
-
-/* Posicionamiento de los logos */
-/* Ajustes del logo Recuperar Chile */
-.logo-recuperar-chile {
-  margin-top: 15px; /* Espacio superior para separarlo del botón */
-}
-
-
 
 .hidden {
   display: none;
 }
+
 /*--------------------------------------------------------------
 #10 Primeras medidas
 --------------------------------------------------------------*/
