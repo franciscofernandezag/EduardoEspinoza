@@ -856,107 +856,335 @@ h4.title {
 }
 
 /*--------------------------------------------------------------
-# Conoceme section 
+# Conoceme Section 
 --------------------------------------------------------------*/
 #conoceme {
-  background: linear-gradient(135deg, #1f5c80, #857d8d); /* Degradado de fondo */
-  color: #EAEAEA; /* Color de texto gris claro para buen contraste */
+  background: linear-gradient(135deg, #1f5c80, #857d8d); /* Fondo degradado */
+  color: #EAEAEA; /* Texto claro para contraste */
+  padding: 50px 0; /* Espaciado general */
 }
 
 #conoceme .section-title {
-  text-align: center; /* Centrar el título de la sección */
+  text-align: center; /* Centrar el título */
+  margin-bottom: 40px;
 }
 
 #conoceme h2 {
-  font-size: 2.5rem; /* Tamaño grande para el título */
-  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
-  color: #FFD700; /* Color dorado para el título */
-  font-weight: 800; /* Negrita para mayor impacto */
+  font-size: 2.5rem;
+  font-family: 'Saira Extra Bold', sans-serif;
+  color: #FFD700; /* Dorado para el título */
+  font-weight: 800;
 }
 
 #conoceme h3 {
-  font-size: 2rem; /* Tamaño medio para el subtítulo */
-  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
-  color: #FFFFFF; /* Subtítulo en blanco */
-  font-weight: 700; /* Más negrita para subtítulos */
+  font-size: 2rem;
+  font-family: 'Saira Extra Bold', sans-serif;
+  color: #FFFFFF; /* Blanco para subtítulo */
+  font-weight: 700;
 }
 
 #conoceme p {
   margin-bottom: 15px;
-  text-align: justify; /* Justificar el texto */
-  line-height: 1.6; /* Altura de línea para mejor legibilidad */
-  font-weight: 600; /* Aumentar negrita para los párrafos */
-  color: #F0F0F0; /* Texto gris claro para buen contraste */
+  text-align: justify;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #F0F0F0; /* Texto gris claro */
 }
 
+#conoceme img {
+  max-width: 85%;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+#conoceme img:hover {
+  transform: scale(1.05); /* Zoom en hover */
+}
+
+/* Icon Box */
 .icon-box {
-  background: #ffffff; /* Fondo blanco para los iconos */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  text-align: center; /* Centrar el texto dentro del icono box */
-  transition: background-color 0.3s ease; /* Transición suave en el hover */
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .icon-box i {
-  font-size: 2rem; /* Tamaño grande para los iconos */
-  color: #6a62a1; /* Color del icono */
-  margin-bottom: 10px; /* Espacio debajo del icono */
+  font-size: 2rem;
+  color: #6a62a1;
+  margin-bottom: 10px;
 }
 
 .icon-box h4 {
-  font-size: 1.25rem; /* Tamaño del título */
-  font-family: 'Saira Extra Bold', sans-serif; /* Tipografía destacada */
+  font-size: 1.25rem;
+  font-family: 'Saira Extra Bold', sans-serif;
   margin-bottom: 10px;
-  font-weight: 700; /* Negrita para el título del icono */
+  font-weight: 700;
 }
 
 .icon-box p {
-  font-size: 1rem; /* Tamaño del texto en el icono box */
-  font-weight: 600; /* Aumentar peso del texto para mayor legibilidad */
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .icon-box:hover {
-  background-color: #f0f0f0; /* Color de fondo en hover */
+  background-color: #f0f0f0;
 }
 
-/* Responsive design */
+/* Principios y Problemas */
+.principles h4, .current-issues h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFD700; /* Dorado */
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 215, 0, 0.1); /* Fondo suave */
+  border-radius: 5px;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
   #conoceme .row {
     flex-direction: column;
   }
 
-  #conoceme .text-left, #conoceme img {
-    text-align: center;
+  #conoceme img {
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  #conoceme img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0px;
+  #conoceme h2 {
+    font-size: 2rem;
   }
+
+  #conoceme h3 {
+    font-size: 1.75rem;
+  }
+
+  #conoceme p {
+    font-size: 0.9rem;
+  }
+}
+.gy-5 {
+  --bs-gutter-y: 0; /* Elimina el margen vertical */
 }
 
 
-/* Responsive design */
-@media (max-width: 768px) {
-  #conoceme .row {
-    flex-direction: column;
-  }
+/* Estilo para la sección del programa */
+#programa {
+  background-color: #f9f9f9; /* Color de fondo de la sección */
+  padding: 50px 0; /* Espaciado vertical */
+}
 
-  #conoceme .text-left, #conoceme img {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+/* Estilo para el título de la sección */
+#programa h2 {
+  font-size: 2.5rem; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+  font-weight: 700; /* Peso de la fuente */
+}
 
-  #conoceme img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0px;
-  }
+/* Estilo para la descripción de la sección */
+#programa p {
+  font-size: 15px; /* Tamaño de fuente */
+  color: #3b3a3a; /* Color del texto */
+}
+
+/* Estilo para los ítems de servicios */
+.service-item {
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #e0e0e0; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para el efecto hover */
+}
+
+/* Estilo para los íconos */
+.icon {
+  font-size: 2.5rem; /* Tamaño de los íconos */
+  transition: color 0.3s; /* Transición para el color */
+}
+
+/* Efecto al pasar el mouse sobre el ícono */
+.service-item:hover .icon {
+  color: #FF1150; /* Cambia el color del ícono al pasar el mouse */
+}
+
+/* Efecto de entrada para la animación */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto de zoom-in */
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+}
+
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+}
+
+.description {
+  word-wrap: break-word; /* Asegura que las palabras largas se dividan */
+  margin:auto; /* Elimina márgenes predeterminados */
 }
 
 
+.propuestas {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Justificar a la izquierda */
+}
+
+
+
+.propuestas li {
+  background-color: #f8f9fa; /* Color de fondo suave */
+  margin-bottom: 5px; /* Espacio entre los elementos */
+  padding: 5px 0; /* Espaciado interno superior e inferior, solo en la parte superior */
+}
+
+
+
+.propuestas.seguridad strong {
+  color: #a30831; /* Color atractivo para los títulos de Seguridad */
+}
+
+.propuestas.salud strong {
+  color: #0b4657; /* Color atractivo para los títulos de Seguridad */
+}
+
+
+.seguridad-title {
+  background: linear-gradient(90deg, #FF1150, #FFB2B2); /* Degradado de rojo a rosado */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+
+.salud-title {
+  background: linear-gradient(90deg, #00A6D6, #A4D6E1); /* Degradado de azul a celeste */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+/* Título de Deporte */
+.deporte-title {
+  background: linear-gradient(90deg, #FF5733, #FF9B8C); /* Degradado de rojo a un tono más claro */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Títulos de Propuestas en Deporte */
+.propuestas.deporte strong {
+  color: #912c16; /* Color atractivo para los títulos de Deporte */
+}
+
+/* Título de Turismo */
+.turismo-title {
+  background: linear-gradient(90deg, #0b6363, #8dbeb4); /* Degradado de verde a un tono más claro */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Títulos de Propuestas en Turismo */
+.propuestas.turismo strong {
+  color: #063f37; /* Color atractivo para los títulos de Turismo */
+}
+
+
+/* Título de Transparencia */
+.transparencia-title {
+  background: linear-gradient(90deg, #007BFF, #66B3FF); /* Degradado de azul a un tono más claro */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Títulos de Propuestas en Transparencia */
+.propuestas.transparencia strong {
+  color: #0056b3; /* Color atractivo para los títulos de Transparencia */
+}
+
+/* Título de Medio Ambiente */
+.medio-ambiente-title {
+  background: linear-gradient(90deg, #257927, #A5D6A7); /* Degradado de verde a un tono más claro */
+  color: white; /* Color de texto blanco */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Títulos de Propuestas en Medio Ambiente */
+.propuestas.medio-ambiente strong {
+  color: #07500b; /* Color atractivo para los títulos de Medio Ambiente */
+}
+
+/* Título de Gestión Interna */
+.gestion-title {
+  background: linear-gradient(90deg, #4b4a4a, #8f9fa8); /* Degradado de gris oscuro a gris claro */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Títulos de Propuestas en Gestión Interna */
+.propuestas.gestion strong {
+  color: #353535; /* Color gris oscuro para los títulos */
+}
+
+/* Título de Bienestar Animal */
+.animal-title {
+  background: linear-gradient(90deg, #8D6E63, #D7CCC8); /* Degradado de marrón oscuro a marrón claro */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Títulos de Propuestas en Bienestar Animal */
+.propuestas.animal strong {
+  color: #5D4037; /* Color marrón oscuro para los títulos */
+}
+
+/* Título de Economía */
+.economia-title {
+  background: linear-gradient(90deg, #1565C0, #4caf9e); /* Degradado de azul a verde */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Títulos de Propuestas en Economía */
+.propuestas.economia strong {
+  color: #10324e; /* Color verde oscuro para los títulos */
+}
 
 
 /*--------------------------------------------------------------
@@ -1033,7 +1261,6 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
   position: relative;
 }
 
@@ -1099,109 +1326,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h3 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19px;
-  padding: 10px 20px;
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
-  border-radius: 7px;
-  display: inline-block;
-}
-
-.about .content h2 {
-  font-weight: 700;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
-.about .content .read-more {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 12px 24px;
-  border-radius: 5px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about .content .read-more i {
-  font-size: 18px;
-  margin-left: 5px;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.about .content .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  padding-right: 19px;
-}
-
-.about .content .read-more:hover i {
-  margin-left: 10px;
-}
-
-.about .icon-box {
-  background-color: var(--surface-color);
-  padding: 50px 40px;
-  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: all 0.3s ease-out 0s;
-}
-
-.about .icon-box i {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  font-size: 32px;
-  line-height: 0;
-  transition: all 0.4s ease-out 0s;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
-}
-
-.about .icon-box h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.about .icon-box p {
-  margin-bottom: 0;
-}
-
-.about .icon-box:hover i {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .icon-boxes .col-md-6:nth-child(2) .icon-box,
-.about .icon-boxes .col-md-6:nth-child(4) .icon-box {
-  margin-top: -40px;
-}
-
-@media (max-width: 768px) {
-
-  .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
-  .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
-    margin-top: 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1308,7 +1432,6 @@ section,
   content: "";
   height: 30px;
   width: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 70%);
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
